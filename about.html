@@ -1,0 +1,627 @@
+<!-- /*
+* Template Name: Property
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>
+      Property &mdash; Free Bootstrap 5 Website Template by Untree.co
+    </title>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="container">
+        <div class="menu-bg-wrap">
+          <div class="site-navigation">
+            <a href="index.html" class="logo m-0 float-start"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX/OFz/////Rmf/NVr/M1n/MFf/HEz/K1T/Ik//KFL/H03/JlH/GUr/+/z/+Pn/zdT/8fP/6+7/fJD/gpX/wMn/xs7/4ub/c4n/XHf/a4L/q7f/maj/uML/1tz/sLv/VXH/oa7/1Nr/TWv/j5//3eL/Z3//PmH/prP/f5P/i5z/laX/5un/SWn/nKv/YHr/aIDLZJVYAAANq0lEQVR4nO1d6VrbOhCN8b4QkgBZICGEJZSw9P3f7ibdfMaS7RlZotf9fH62xvHxSKPZPdqe/eMYnfmjfxxnf/sBnGNg2H8MDPuPgWH/MTDsPwaG/cfAsP8YGPYfA8P+Y2DYfwwM+4+BYf/xpQz94ISv/MXR1zH0wzQr/O1qtdoGRZaGXxeI/hqGYTa6vJp7vzFfX/pJ+CW//DUM4+xy41Wx+xbFX/DbX8EwTG7HCr8TxocvkaNrhn4xm2j5nTBZRI5/fuScYRhe1PI74Tp1rlrdMkyX+gUKYnxwvRudMkxmLfxOWKUuH8Etw+SVQdDzZm4pOmSYfmMRPErR6UJ1xzD81JA5H4/P1X99cKlunDH0g6qSefr4HGVRlOwXd5UDZOJynTpjWOwoi6uzKA5+WKNHE7VYPZH/vC5cPYY7hjHVMvNtQmztsPhGVus3d1vREUN/RAiuI2Wnxf4cLjh352w4YphdI8F73SL0IzR3rhI3D+KKYUD06F2N9Rmhx7F0pU/dMCze4Nl3dWrET0CnPrkywp0wJGrmPK7dYsEWrls4cqWcMMzHzCfP78vrpo6E6IJhCs/tXTQ+eDQtr3x1c2I4YOiHqGZGjcdA+L28cuxGnTpgmN7gQdFikGVwZHw4EaJ9hr7vCeTin4FOcnLs22eYr4HhY6tYErj8xoUFbp2hvweCk0x2feBAiNYZJlfwxJeMMy6/cytE2wz9dyD4xjni/AB2ogNdY5shESHPTMHj88W+EC0zRNXozZlWSg6u4v+eIRHhM9NdiG/Lv7nL7T6QbYZkFz6xQxMx/FWzDWQAuwyJCFdsZwGtoLVtIVplSHbhRuArpA6FaJUhEeGnwGmPQZ2uLRvgNhmSXbgRBQhT8Cj3doVokyERoSzugurUclDKIkOyC3dCjz0CIdrtp7PIsIMIj0J8LP/22qoQ7TEkIrxodyoqyCDuZjVTY48hEeFW/IwYn7sWv58GWGNIFKlchDQoJX9B9bDGEH11o2UWXnZ7Q3WwxZC46maqAgPlFoVoiyHZhWaaIoS6BotCtMTQggiPO9GJEC0xJCI0PbHDBQjRWozfDkMiQnOrK4KkqbVsmx2GJEZqbnShEKVmXy2sMLQkwqMQoYDBlhCtMLQkwqMQVyBES+rUBkNSltDN9ynsC9EGQ4xad/RfiRDt7EQLDEmyqav7an8nWmBIRNjVe7W/E7sztCpCBzuxO8P0RSBC/4jmK1CIVqzTzgxJ1r5BhEGcZ0k42u/9OEuaOkpwJ9qwTjszZIkwyKPl7dX8Z7TpfLJZX+6jujIb20LszDCGxFGNCOPo+UqpaJ/f7xO9hAq7QuzKEKPVehGG2eu0Su+XhJaZ9g/sCrErw6RFhI0dJd7FmS5fWICL0T3s1pFh/NEswni0q+d3wm2k/hG6GN3Dbh0ZYgWbRoTJQlO3TrGJVSlFNoXYjWF88JqeJbpVCKmYvCt5RiLErjZEN4aYbVAfJbpR+WhwvlUoYtitqx3YiSEmG7z36pNk9wqZGor7qvQx7NbVEOzEEGt8FRHGlyqXGkyVzHZkT4hdGIZYClw9m4OHKo/N/ewhCMOzxYfSsaf0W2AAvGNSuAvDAk5y5WjGQ+2IySHM4h/WqB/GSfr6Rv7Xm1WLofDe3ZzqDgxD7NyqipBsUc87ZNQMDaMZseOUwktcH93KMzowxL2iOKtornrzvWq6xClpyVAqhTCf2EmI5gxR3ym+akxLvXWntl+Qw6TqN+Ii6FQoZc4QDQ+ldiaDNVjbb0EovlR3Ip61XYqHjRmiB6DUzqB8J0nt42F/26T6krA8o0vJojFD9OKUfpcEzoPn+uIvP4DdqtT5JSDEv8CQdDatqg8HVVyNSSQsLb2rssC9fG9eWmvKELuylDrSAFbw90bfAKoS54qflJYSHpsL0ZBhsAQRKqXAcRm7mTQXfyVwZCgkMAR0ayxEQ4bYCKJWc+flc6+bXz5aZ0pMBivAx8aesBlDYnTOFFWSlQfJt+YiU8zLqffBaHp750YNzBhiUlvTcwY+R5tjAArzoHBA/ozWDT2MGJICL01PBaiItjphELdGX2KRDqd3QwcjhpgR1b3bUkO26sBk9+da5bigr3Jq2NFuwpDkYnT7Axi2+XZgG2gYEl2r7lMWTBimoAC0Oq5k2NoEAwx1pzr20XLbNyowYEhyMdqeQdiHbammpDT+VE0zoscSv/gfYcAQrSm9jECXPrQwBDdQq0rQtJBU/5cwYIiBfH2zGSjIts0D60HfYtM5YypnSKLAescNbJoWkxkNeL0n3zlPI2eI4YWaCArYpdfN7jk4geOaK7uG+MUMSQixJoACUfk2y7tUJE81AsKAl0mIX8wQi5XrwtFobTWrmqLc07U2esfAopQhJk3UQP5vwGtobEEPnsub1VplGJMyCCxKGaJqq9/4aWnW1S2+n9eB7VBvo2M4o+18VSFkiC+9QXljJKrJuwCt1TAWA9Ow8l5oIcNsV/7YpkE6eXlZw3mB0Y4mVxk7MMVuoowhe9wK6MgGbYp2tRLNAmAHpni0hIwhPtJb0zmA0Ylac5JEKZosMlLeKY0OixiSWuDm+AQsrNoqSow0NcdzMKYgjQ6LGBLPt9kMzuGZ6sp+sK2y2eTEliPpVAIJQ1xVel+nBPoENZYIGrht0xfQiRIGFiUM0W1qdd4xQ6q3DPCYa4ukYXBvLAtnSBhiNqg1zI66Rlv2g5mX81anAYUoi0kJGBKbu32lYBmDZpf5caubicBV36jFFQgYYs6XkbPEbaYZr0Bqpxk9+JgoaTo7FfAZogHCsvExFqC4+iTkyrGnSVOUxIniM8SdwPLTUIiT6h8UWHHCGqOATpRk7gKbIXnpvMJW3Ik3VEzECeOl6dGJkqQT2QzR0WH2epCqKBqAwMOeO+IL6iBbzA0CNkOsPeAOnkHdNEdlQ5qGuSc42t+C0CmXIYa82GMqiTd5W54IZIgye14iWsWCgA2XIdqZ/BOXDGp9/yN53KACcTQmjGvBZQgm1jl/ExC35886jXCNCtphMbjKnwXKZIjrTZcjqgMJH7/8XFox6lGR4ofQaUv2HMBkGMMuF/VAYDzX+zy9eH+EJW+i5DW8L9YouB9gMoQU0VQUWicZ//HpXMBonWBaVvVm7NfMZJiVt+avjx/AMbOnErcEu4ik9b/g3bBtUx5DHyJQLdUVCkgp7X2B1q147CzkxNl+MI8hN/6pQ4BDTzxSOHshTc2DYcVeSjyG4K0Kzorfj0XLhUuMxUWV4KKy/Qsmw1KVquVnrShqvjXzXZy1BoOd/Rw8hpCH2MgTXH6sbe56kd8JPH228S1mKPI+fyFcagiaZOUh5s6eHP0lDEf5QSE4Npmo65BhqcOejPo7ousqw6VJ6QhEUiwzhEip4XD4vNJH+mhUfg8hSnYlH/M8hECiWY9OQD/pcWVWpAYlEG92GaJrYdZ8XFwRht7SqFwUylh2dlcp+nktCQs9irVXgdp0yLlNeexYtmlGUXlrE2VavFQJeudq62grMEHLftFc7wnMEnkDS6TrtTSgCNuQXwHG9YAhjSJeptGHys+IYlYq5PZczm8wGfrge0qLdTVL9NdTPsgomgX2uZEoeH3C7FZxp3L7s9REywE9Tf4zcBniFpCUzfuVY6IyH2MhOPhjbAfkvxouQ1KkcMdeIkFKP7A29itL9pFtIvkxTjfgvxl2VB+1aVM/GkF8VvGbHsLqyXhXMFVzgaatoJaWzZB0Oqkd9Fpk1a90nlRLleImZL2uHCMFEs/LLH/oTRnfgA2yqo75/LF7qgbc+Jmx6FMSRpZMQxfkgEmD/VvY9iPJtjqWZvtLPSgm3E3WdrOchOhE1dCCPD7JvHuT90Z1FibVoRjj0hKNqhSnn9pZPH8Q0a8piupoJdUmGVUbs3odEapzdyZnsN0ixQi4GuX1d8voGzmIYtIShkEl3HI90v9UGC3oQIUj3nyyECM1wnjj6zkGxYq+LdnEfmFdWzXc8pLmyliSPHpV+Hm76tMnC+Uab/2uDADz42K5o1eNhWXCsupL1c1bP2f5z3kXIz84TbxYKZd4p0NPuVW81XzQ+umwj/JfH2Q9DdDI/EflbUkdS2GNcKQGdyfXt6v3uCgyfzt72WmnJl3qdF8YPOmufVsfVvsoKorkYXajuWLhtoL2qG026o+2YFrzcfHK2AgC7YeRT5iJI1hShn7W/Dl4FVc1g+eOSFZtn17vTtCgKyhq8IZUjBdNp3MYK3HUJpx/GrTlG/SuZfzxSN46bunljhYNA+sqmO9NolcmPaTxmXocaPG0bLc4w4Q7MOtFM7yOAbNe7uKxddLcUcPMCpaBnAa6A0Z5W1vDITWGMxXioG03zmcZd035+ahtstt0pp3iw4Hp5A8/D24aFOHVspDsGT/N1KO9xGYmuhuF+YwhP81n2pPj/OIyVoy5VsTRw4uW5PTmIeryMeROE+nCJFncbXBLTi/un0/DdE0QxNnocv1Ebnd9UG1VIbrOLw3TJDv7nD1+fBwuvz/EUaIZZcmHf7rdfrl4vP04vC624dFI7fztJytT548m9xGhpe+kHm93ul/YGkXgwe7XAf+PGBj2HwPD/mNg2H8MDPuPgWH/MTDsPwaG/cfAsP8YGPYfA8P+Y2DYfwwM+4+BYf8xMOw/Bob9x8Cw/xgY9h8Dw/5jYNh//PMM/wO/Ip+JdLFUzQAAAABJRU5ErkJggg==" alt="Airbnb Logo" height="40">
+    Airbnb</a>
+
+            <ul
+              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+            >
+              <li><a href="index.html">Home</a></li>
+              <li class="has-children">
+                <a href="properties.html">Properties</a>
+                <ul class="dropdown">
+                  <li><a href="#">Buy Property</a></li>
+                  <li><a href="#">Rent Property</a></li>
+                  <li class="has-children">
+                    <a href="#">Dropdown</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Simple</a></li>
+                      <li><a href="#">Luxury</a></li>
+                      <li><a href="#">Super Delux</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="services.html">Services</a></li>
+              <li class="active"><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <a
+              href="#"
+              class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+              data-toggle="collapse"
+              data-target="#main-navbar"
+            >
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="hero page-inner overlay"
+      style="background-image: url('images/hero_bg_3.jpg')"
+    >
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-9 text-center mt-5">
+            <h1 class="heading" data-aos="fade-up">About</h1>
+
+            <nav
+              aria-label="breadcrumb"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <ol class="breadcrumb text-center justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li
+                  class="breadcrumb-item active text-white-50"
+                  aria-current="page"
+                >
+                  About
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="row text-left mb-5">
+          <div class="col-12">
+            <h2 class="font-weight-bold heading text-primary mb-4">About Us</h2>
+          </div>
+          <div class="col-lg-6">
+            <p class="text-black-50">
+              Welcome to Airbnb, a global platform that connects people looking
+              for unique places to stay with hosts who want to share their homes
+              and spaces. Founded with the vision of creating a world where anyone
+              can belong anywhere, Airbnb has transformed the way people travel by
+              offering comfortable, affordable, and personalized accommodations
+              beyond traditional hotels.
+            </p>
+            <p class="text-black-50">
+              Airbnb allows travelers to discover a wide range of stays, from cozy 
+              apartments and family homes to luxury villas and unique experiences 
+              such as treehouses, cabins, and beachfront properties. Our platform 
+              makes it easy for guests to explore new destinations while enjoying 
+              the comfort and authenticity of local living. By staying in homes 
+              hosted by locals, travelers gain the opportunity to experience cultures, 
+              communities, and lifestyles in a more meaningful way.
+            </p>
+            <p class="text-black-50">
+              For hosts, Airbnb provides an opportunity to earn income by sharing 
+              their space with travelers from around the world. Our platform offers 
+              simple tools to list properties, manage bookings, communicate with 
+              guests, and provide a welcoming experience. Safety, trust, and 
+              transparency are central to our community, with secure payments, 
+              verified profiles, and review systems that help build confidence 
+              between hosts and guests.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p class="text-black-50">
+              Airbnb is not just about accommodation; it is about creating 
+              connections and memorable travel experiences. Whether you are 
+              planning a weekend getaway, a family vacation, a business trip, 
+              or a long-term stay, Airbnb helps you find the perfect place that 
+              suits your needs and budget.
+            </p>
+            <p class="text-black-50">
+              Our mission is to create a world where people can travel freely, 
+              connect with others, and feel at home wherever they go. Through 
+              innovation, community, and hospitality, Airbnb continues to 
+              redefine modern travel and bring people together across cultures 
+              and borders.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section pt-0">
+      <div class="container">
+        <div class="row justify-content-between mb-5">
+          <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
+            <div class="img-about dots">
+              <img src="images/hero_bg_3.jpg" alt="Image" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-home2"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Quality properties</h3>
+                <p class="text-black-50">
+                  Carefully selected homes offering comfort, cleanliness, 
+                  and great locations for a pleasant stay.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-person"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Top rated reviews</h3>
+                <p class="text-black-50">
+                  Guest reviews help travelers choose trusted properties 
+                  with high ratings and positive experiences.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-security"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Easy and safe</h3>
+                <p class="text-black-50">
+                  Simple booking process with secure payments and reliable 
+                  support for a safe travel experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section pt-0">
+      <div class="container">
+        <div class="row justify-content-between mb-5">
+          <div class="col-lg-7 mb-5 mb-lg-0">
+            <div class="img-about dots">
+              <img src="images/hero_bg_2.jpg" alt="Image" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-home2"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Quality properties</h3>
+                <p class="text-black-50">
+                  Carefully selected homes offering comfort, cleanliness, 
+                  and great locations for a pleasant stay.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-person"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Top rated reviews</h3>
+                <p class="text-black-50">
+                  Guest reviews help travelers choose trusted properties 
+                  with high ratings and positive experiences.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-security"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Easy and safe</h3>
+                <p class="text-black-50">
+                  Simple booking process with secure payments and reliable 
+                  support for a safe travel experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <img src="images/img_1.jpg" alt="Image" class="img-fluid" />
+          </div>
+          <div class="col-md-4 mt-lg-5" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/img_3.jpg" alt="Image" class="img-fluid" />
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/img_2.jpg" alt="Image" class="img-fluid" />
+          </div>
+        </div>
+        <div class="row section-counter mt-5">
+          <div
+            class="col-6 col-sm-6 col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="counter-wrap mb-5 mb-lg-0">
+              <span class="number"
+                ><span class="countup text-primary">2917</span></span
+              >
+              <span class="caption text-black-50"># of Buy Properties</span>
+            </div>
+          </div>
+          <div
+            class="col-6 col-sm-6 col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="counter-wrap mb-5 mb-lg-0">
+              <span class="number"
+                ><span class="countup text-primary">3918</span></span
+              >
+              <span class="caption text-black-50"># of Sell Properties</span>
+            </div>
+          </div>
+          <div
+            class="col-6 col-sm-6 col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="counter-wrap mb-5 mb-lg-0">
+              <span class="number"
+                ><span class="countup text-primary">38928</span></span
+              >
+              <span class="caption text-black-50"># of All Properties</span>
+            </div>
+          </div>
+          <div
+            class="col-6 col-sm-6 col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="counter-wrap mb-5 mb-lg-0">
+              <span class="number"
+                ><span class="countup text-primary">1291</span></span
+              >
+              <span class="caption text-black-50"># of Agents</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section sec-testimonials bg-light">
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6">
+            <h2 class="font-weight-bold heading text-primary mb-4 mb-md-0">
+              The Team
+            </h2>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div id="testimonial-nav">
+              <span class="prev" data-controls="prev">Prev</span>
+
+              <span class="next" data-controls="next">Next</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4"></div>
+        </div>
+        <div class="testimonial-slider-wrap">
+          <div class="testimonial-slider">
+            <div class="item">
+              <div class="testimonial">
+                <img
+                  src="images/person_1-min.jpg"
+                  alt="Image"
+                  class="img-fluid rounded-circle w-25 mb-4"
+                />
+                <h3 class="h5 text-primary">James Smith</h3>
+                <p class="text-black-50">Designer</p>
+
+                <p>
+                  My stay booked through Airbnb was amazing. 
+                    The house was clean, comfortable, and exactly like 
+                    the photos. The host was very friendly and helpful. 
+                    It felt more personal than staying in a hotel. I 
+                    would definitely use Airbnb again for my next trip.
+                </p>
+
+                <ul class="social list-unstyled list-inline dark-hover">
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-twitter"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-facebook"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-linkedin"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-instagram"></span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="testimonial">
+                <img
+                  src="images/person_2-min.jpg"
+                  alt="Image"
+                  class="img-fluid rounded-circle w-25 mb-4"
+                />
+                <h3 class="h5 text-primary">Carol Houston</h3>
+                <p class="text-black-50">Co-founder g btx</p>
+
+                <p>
+                  Airbnb made my travel experience very easy. 
+                    Booking the property was simple and the location 
+                    was perfect. I also loved reading the reviews before 
+                    choosing a place. It helped me find a safe and 
+                    beautiful home during my vacation.
+                </p>
+
+                <ul class="social list-unstyled list-inline dark-hover">
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-twitter"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-facebook"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-linkedin"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-instagram"></span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="testimonial">
+                <img
+                  src="images/person_3-min.jpg"
+                  alt="Image"
+                  class="img-fluid rounded-circle w-25 mb-4"
+                />
+                <h3 class="h5 text-primary">Synthia Cameron</h3>
+                <p class="text-black-50">Doctor</p>
+
+                <p>
+                  I really enjoyed the unique stay I found 
+                    on Airbnb. The place had a great view and the host 
+                    gave helpful local recommendations. It made my trip 
+                    feel more authentic and enjoyable.
+                </p>
+
+                <ul class="social list-unstyled list-inline dark-hover">
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-twitter"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-facebook"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-linkedin"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-instagram"></span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="testimonial">
+                <img
+                  src="images/person_4.jpg"
+                  alt="Image"
+                  class="img-fluid rounded-circle w-25 mb-4"
+                />
+                <h3 class="h5 text-primary">Davin Smith</h3>
+                <p class="text-black-50">Student</p>
+
+                <p>
+                  The platform is very easy to use and offers 
+                    many great properties at reasonable prices. Customer 
+                    support was helpful and the booking process was smooth. 
+                    Airbnb is now my first choice when I travel.
+                </p>
+
+                <ul class="social list-unstyled list-inline dark-hover">
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-twitter"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-facebook"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-linkedin"></span></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#"><span class="icon-instagram"></span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Contact</h3>
+              <address>43 Raymouth Rd. Goa, India, 30910</address>
+              <ul class="list-unstyled links">
+                <li><a href="tel://11234567890">91 5445607890</a></li>
+                <li><a href="tel://11234567890">91 1234567890</a></li>
+                <li>
+                  <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Sources</h3>
+              <ul class="list-unstyled float-start links">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Vision</a></li>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+              <ul class="list-unstyled float-start links">
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Creative</a></li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Links</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Our Vision</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+
+              <ul class="list-unstyled social">
+                <li>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-pinterest"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-dribbble"></span></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <!-- 
+              **==========
+              NOTE: 
+              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+              **==========
+            -->
+
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              . All Rights Reserved. &mdash; Designed with love by
+              <a href="https://untree.co">Untree.co</a>
+              <!-- License information: https://untree.co/license/ -->
+            </p>
+            <div>
+              Distributed by
+              <a href="https://themewagon.com/" target="_blank">themewagon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.site-footer -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
